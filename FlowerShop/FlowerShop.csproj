@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F693B2B-50A0-4472-A13A-DDD0471D1A53}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FlowerShop</RootNamespace>
+    <AssemblyName>FlowerShop</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=127be25a6db25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addinventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addinventory.Designer.cs">
+      <DependentUpon>addinventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backup.Designer.cs">
+      <DependentUpon>backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="card.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="card.Designer.cs">
+      <DependentUpon>card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerinfo.Designer.cs">
+      <DependentUpon>customerinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerorder.Designer.cs">
+      <DependentUpon>customerorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Daochu.cs" />
+    <Compile Include="floweradd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="floweradd.Designer.cs">
+      <DependentUpon>floweradd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flowerupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flowerupdate.Designer.cs">
+      <DependentUpon>flowerupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventoryselect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventoryselect.Designer.cs">
+      <DependentUpon>inventoryselect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inventoryupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventoryupdate.Designer.cs">
+      <DependentUpon>inventoryupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lookprovide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lookprovide.Designer.cs">
+      <DependentUpon>lookprovide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="method\Backup.cs" />
+    <Compile Include="method\ClassMD5.cs" />
+    <Compile Include="method\DgvPrinter.cs" />
+    <Compile Include="method\dtpchange.cs" />
+    <Compile Include="method\inputnumber.cs" />
+    <Compile Include="method\measure.cs" />
+    <Compile Include="method\SqlHelper.cs" />
+    <Compile Include="method\ValidCode.cs" />
+    <Compile Include="print1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print1.Designer.cs">
+      <DependentUpon>print1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="provideadd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="provideadd.Designer.cs">
+      <DependentUpon>provideadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="provideupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="provideupdate.Designer.cs">
+      <DependentUpon>provideupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repasswd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repasswd.Designer.cs">
+      <DependentUpon>repasswd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="retailadd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="retailadd.Designer.cs">
+      <DependentUpon>retailadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="retailselect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="retailselect.Designer.cs">
+      <DependentUpon>retailselect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="retailupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="retailupdate.Designer.cs">
+      <DependentUpon>retailupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supplieradd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supplieradd.Designer.cs">
+      <DependentUpon>supplieradd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updatetask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatetask.Designer.cs">
+      <DependentUpon>updatetask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userdelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userdelete.Designer.cs">
+      <DependentUpon>userdelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userupdate.Designer.cs">
+      <DependentUpon>userupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="useradd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="useradd.Designer.cs">
+      <DependentUpon>useradd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flowerlookup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="flowerlookup.Designer.cs">
+      <DependentUpon>flowerlookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="warehoselook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="warehoselook.Designer.cs">
+      <DependentUpon>warehoselook.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addinventory.resx">
+      <DependentUpon>addinventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="backup.resx">
+      <DependentUpon>backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="card.resx">
+      <DependentUpon>card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerinfo.resx">
+      <DependentUpon>customerinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerorder.resx">
+      <DependentUpon>customerorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="floweradd.resx">
+      <DependentUpon>floweradd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flowerupdate.resx">
+      <DependentUpon>flowerupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventoryselect.resx">
+      <DependentUpon>inventoryselect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventoryupdate.resx">
+      <DependentUpon>inventoryupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lookprovide.resx">
+      <DependentUpon>lookprovide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print1.resx">
+      <DependentUpon>print1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="provideadd.resx">
+      <DependentUpon>provideadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="provideupdate.resx">
+      <DependentUpon>provideupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repasswd.resx">
+      <DependentUpon>repasswd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="retailadd.resx">
+      <DependentUpon>retailadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="retailselect.resx">
+      <DependentUpon>retailselect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="retailupdate.resx">
+      <DependentUpon>retailupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supplieradd.resx">
+      <DependentUpon>supplieradd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatetask.resx">
+      <DependentUpon>updatetask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userdelete.resx">
+      <DependentUpon>userdelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userupdate.resx">
+      <DependentUpon>userupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="useradd.resx">
+      <DependentUpon>useradd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flowerlookup.resx">
+      <DependentUpon>flowerlookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="warehoselook.resx">
+      <DependentUpon>warehoselook.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\FlowerShop.exe.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11949215_154220602001_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bfhws.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bj3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\FlowerShop.exe" />
+    <Content Include="bin\Debug\FlowerShop.pdb" />
+    <None Include="Resources\5.jpg" />
+    <None Include="Resources\D51.jpg" />
+    <None Include="Resources\151.jpg" />
+    <None Include="Resources\211.jpg" />
+    <None Include="Resources\微信图片_20211028220253.jpg" />
+    <None Include="Resources\161.jpg" />
+    <None Include="Resources\231.jpg" />
+    <None Include="Resources\141.jpg" />
+    <None Include="Resources\微信图片_202110282108511.jpg" />
+    <None Include="Resources\191.jpg" />
+    <None Include="Resources\182.jpg" />
+    <None Include="Resources\241.jpg" />
+    <None Include="Resources\21.jpg" />
+    <None Include="Resources\微信图片_20211024211646.jpg" />
+    <None Include="Resources\微信图片_20211028210851.jpg" />
+    <None Include="Resources\24.jpg" />
+    <None Include="Resources\23.jpg" />
+    <None Include="Resources\181.jpg" />
+    <None Include="Resources\121.jpg" />
+    <None Include="Resources\22.jpg" />
+    <None Include="Resources\20.jpg" />
+    <None Include="Resources\19.jpg" />
+    <None Include="Resources\18.jpg" />
+    <None Include="Resources\17.jpg" />
+    <None Include="Resources\14.jpg" />
+    <None Include="Resources\15.jpg" />
+    <None Include="Resources\16.jpg" />
+    <None Include="Resources\12.jpg" />
+    <None Include="Resources\11.jpg" />
+    <None Include="Resources\微信图片_20211014184524.jpg" />
+    <None Include="Resources\10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
